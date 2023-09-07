@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <nav
+        class="justify-between pr-5 bg-gradient-to-r from-[#434343] to-[#1f1b1b] w-full h-[7vh] flex items-center md:justify-evenly shadow-lg relative z-10">
+        <div class="px-2 ">
+            <h2 class="text-white text-sm md:text-sm lg:text-lg uppercase md:cursor-pointer font-bold">Brandtastic</h2>
+        </div>
+
+        <div class="flex justify-between items-center ">
+            <div class="menu-icon md:hidden">
+                <div class="bar w-6 h-1 bg-white mb-1"></div>
+                <div class="bar w-6 h-1 bg-white mb-1"></div>
+                <div class="bar w-6 h-1 bg-white"></div>
+            </div>
+            <div class="close-icon cursor-pointer hidden text-white">
+                <i class="fa-solid fa-xmark" style="color: #fff;"></i>
+            </div>
+            <ul class="hidden md:flex justify-center items-center text-white text-sm md:text-base md:uppercase">
+                <li class="px-1 md:px-2 md:cursor-pointer hover:opacity-80 ">Home</li>
+                <li class="px-1 md:px-2 md:cursor-pointer hover:opacity-80 ">Categories</li>
+                <li class="px-1 hidden md:px-2 md:block md:cursor-pointer hover:opacity-80 ">About</li>
+                <li class="px-1 hidden md:px-2 md:block md:cursor-pointer hover:opacity-80 ">Contact Us</li>
+            </ul>
+        </div>
+
+        <ul class="mobile-menu w-full text-center text-xl pt-20 md:hidden ">
+            <li><a href="#" class="text-white leading-10">Home</a></li>
+            <li><a href="#" class="text-white leading-10">Categories</a></li>
+            <li><a href="#" class="text-white leading-10">About</a></li>
+            <li><a href="#" class="text-white leading-10">Contact</a></li>
+            <!-- <li><a href="#" class="hover:text-gray-300"></a></li> -->
+        </ul>
+
+        <div class="mx-3 hidden md:block">
+            <i class="fa-solid fa-magnifying-glass md:fa-lg px-1 md:px-3  md:cursor-pointer" style="color: #fff;"></i>
+            <i class="fa-solid fa-heart md:fa-lg px-1 md:px-3 md:cursor-pointer hidden md:block"
+                style="color: #fff;"></i>
+            <i class="fa-sharp fa-solid fa-bag-shopping md:fa-lg px-1 md:px-3 md:cursor-pointer hidden md:block"
+                style="color: #fff;"></i>
+        </div>
+
+        <div class="hidden md:block mr-2">
+            <img src="./images/dbs2.jpg " alt="Profile Image" class="rounded-full w-6 h-6 md:w-10 md:h-8" />
+        </div>
+    </nav>
+
+    <div
+        class="w-full bg-gradient-to-r pl-2 pr-2 from-[#434343] to-[#1f1b1b] no-underline pt-10 flex items-center justify-center ">
+        <input name="search" id="search" type="search" placeholder="Search"
+            class="w-40 h-10 pl-3 sm:w-[180px] sm:h-[50px] outline-none bg-white px-15 text-sm rounded-tl-3xl rounded-bl-3xl text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 sm:pl-4 md:w-[500px] md:h-[60px] md:text-lg md-px-30 md:rounded-tl-3xl md:rounded-bl-3xl md:pl-6 md:mt-20" />
+
+        <button id="btn-search"
+            class="w-32 h-10 sm:w-[100px] sm:h-[50px] bg-gradient-to-r from-[#434343] to-[#1f1b1b] text-white outline-none rounded-tr-3xl rounded-br-3xl text-sm md:w-[150px] md:h-[60px] md:text-base hover:opacity-80 md:rounded-tr-3xl md:rounded-br-3xl md:mt-20"
+            onclick="searchedProducts()">Search</button>
+
+    </div>
+
+
+    <div id="results"
+        class="text-white  flex flex-col items-center justify-center bg-gradient-to-r from-[#434343] to-[#1f1b1b]  p-4">
+        <!-- <div class="w-20 bg-white"></div> -->
+    </div>
+
+    <div id="container">
+
+        <header
+            class="w-full h-[40vh] bg-gradient-to-r from-[#434343] to-[#1f1b1b] flex md:h-[100vh] md:items-center md:justify-evenly md:pb-[400px]">
+
+            <div class="flex flex-col justify-center text-white ml-10 pt-[-80px] ">
+                <h1 class="mx-5 text-left text-sm md:text-5xl font-bold">TDCC</h1>
+                <p class="mx-5 text-sm md:text-2xl md:mt-4">Empowering Your Digital Lifestyle ! and Growing Everyday</p>
+
+                <div class="flex items-center mt-5">
+                    <button
+                        class="bg-gradient-to-r from-[#434343] to-[#1f1b1b] text-white rounded-[20px] text-xs w-[100px] h-[35px] ml-3 md:w-[150px] md:h-[45px] md:text-base hover:opacity-70"><a
+                            href="./login.html">Get Started!</a></button>
+                    <button
+                        class="text-xs bg-white rounded-[20px] w-[100px] h-[35px] ml-2 text-black md:w-[150px] md:h-[45px] md:text-base hover:opacity-70">Shop
+                        Now
+                        <i class="fa-sharp fa-solid fa-bag-shopping " style="color: #000;"></i></button>
+                </div>
+            </div>
+            <div class="hidden sm:block md:block mt-5">
+
+                <img src="./images/banner2.png" class="w-[300px] h-[250px] md:w-[800px] md:h-[550px]"
+                    alt="Banner Image" />
+            </div>
+
+            <!-- <div class="bg-gray-200 w-full h-screen flex items-center justify-center">
+            <div class="max-w-3xl w-full overflow-hidden relative">
+                <div id="carousel" class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <img src="./images/slider-1.jpg" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slider2.jpg" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/slider-3.jpg" alt="Image 3">
+                        </div>
+                        
+                    </div>
+                </div>
+                <button id="prevButton" class="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full shadow-lg z-10">Prev</button>
+                <button id="nextButton" class="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 bg-gray-800 text-white rounded-full shadow-lg z-10">Next</button>
+            </div>
+        </div> -->
+
+        </header>
+
+        <!-- CATEGORY SECTION -->
+
+        <div class="w-full h-full flex md:flex-wrap flex-col items-center justify-center p-5 md:flex-row ">
+            <img src="./images/cat-1.jpg"
+                class="w-[260px] h-[150px] my-5 md:mx-5 md:cursor-pointer hover:opacity-80 transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out"
+                alt="" />
+            <img src="./images/cat-2.jpg"
+                class="w-[260px] h-[150px] my-5 md:mx-5 md:cursor-pointer hover:opacity-80 transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out"
+                alt="" />
+            <img src="./images/cat-3.jpg"
+                class="w-[260px] h-[150px] my-5 md:mx-5 md:cursor-pointer hover:opacity-80 transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out"
+                alt="" />
+            <img src="./images/cat-4.jpg"
+                class="w-[260px] h-[150px] my-5 md:mx-5 md:cursor-pointer hover:opacity-80 transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out"
+                alt="" />
+        </div>
+
+        <!-- POPULAR PRODUCTS SECTION -->
+        <div id="dynamicProducts" class="mt-5 w-full h-full">
+            <h2 class="font-bold ml-8 md:ml-56 text-xl">POPULAR PRODUCTS</h2>
+            <div class="border-b-4 border-gray-500 w-20 ml-8 md:ml-56"></div>
+
+            <div id="dynamic-Product"
+                class="flex flex-col items-center justify-center mt-5 md:flex-row md:flex-wrap lg:px-44 mb-10">
+                <!-- <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+            class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                    <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div>
+            <div
+                class="bg-gray-300 w-[250px] h-[350px] rounded-lg border border-gray-600 md:cursor-pointer transform hover:scale-110 transition-transform duration-300 ease-in-out md:duration-500 md:ease-in-out mt-10 md:ml-5 md:w-[300px] md:h-[420px] md:pr-2 md:mx-5">
+                <img src="./images/headphone-prod-1.webp" class="w-[220px] h-[130px] mt-3 md:w-[280px] md:h-[240px]"
+                    alt="Product Image" />
+                <h2 class="ml-3 mt-2 font-bold">boAt Rockerz 450 DC edition</h2>
+                <p class="text-sm font-semibold ml-3 mt-2"> Over Ear Bluetooth Headphones with Upto 15 Hours Playback, Adaptive Headband, 40mm Dynamic Driver, 300 mah Battery...</p>
+                <h2 class="font-bold ml-3 mt-2">₹1999</h2>
+            </div> -->
+
+            </div>
+        </div>
+
+        <!-- ABOUT US SECTION -->
+
+        <div class="w-full h-full mt-5 md:mt-36 mb-8 bg-gradient-to-r from-[#434343] to-[#1f1b1b] text-white pb-16">
+            <h1 class="text-center font-bold text-base md:text-3xl pt-5 md:pt-20">ABOUT US</h1>
+            <p class="p-2 mx-5 text-sm md:text-lg md:px-40 md:mt-5 lg:px-80 lg:text-center">We're committed to providing you with the highest
+                quality gadgets and electronics that not only meet but exceed your expectations. Every product in our
+                store
+                is carefully curated and undergoes rigorous testing to ensure its performance, durability, and
+                authenticity.
+            </p>
+
+            <div class="flex flex-col items-center justify-center md:flex-row lg:px-96 lg:mt-10">
+                <img src="./images/watch-prod-2.webp" class="w-[200px] h-[180px] md:w-96 md:h-80"
+                    alt="aboutImage" />
+
+                <div class="md:pr-5 lg:ml-20">
+                    <h2 class="text-xs font-semibold sm:text-sm md:text-lg text-center md:text-left">Your Ultimate Gadgets
+                        Destination!
+                    </h2>
+                    <p class="pr-1 text-sm md:text-lg ml-5 mt-2 md:ml-0">We're more than just an e-commerce store; we're
+                        passionate tech enthusiasts on a mission to transform the way you experience technology.</p>
+
+                    <div class="flex mt-3 items-center justify-start md:mt-6 md:ml-0">
+                        <div class="bg-white rounded-full w-4 h-4 p-1"></div>
+                        <h3 class="ml-3 text-sm md:text-lg">Our Commitment to Quality</h3>
+                    </div>
+                    <div class="flex mt-3 items-center justify-start md:mt-6 md:ml-0">
+                        <div class="bg-white rounded-full w-4 h-4 p-1"></div>
+                        <h3 class="ml-3 text-sm md:text-lg">Expertise You Can Always Trust</h3>
+                    </div>
+                    <div class="flex mt-3 items-center justify-start  md:mt-6 md:ml-0">
+                        <div class="bg-white rounded-full w-4 h-4 p-1"></div>
+                        <h3 class="ml-3 text-sm md:text-lg">Customer-Centric Approach</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTACT US SECTION -->
+
+        <div class="mt-6 w-full h-full mb-10 md:flex md:flex-col md:justify-center items-center">
+            <h2 class="font-bold text-base text-center md:text-3xl pt-5 md:pt-15">MESSAGE US</h2>
+            <p class="hidden md:block md:text-lg md:px-[100px] lg:text-xl lg:px-[400px] text-left mt-3 md:mx-10">We want to hear from you! If you have any questions,
+                feedback, or suggestions, please
+                don't hesitate to contact us.</p>
+
+            <div class="flex mt-5 justify-center items-center p-2 lg:pl-4">
+                <input name="firstname" type="text" placeholder="First name"
+                    class="w-28 sm:w-[132px] text-sm h-10 mx-4 pl-2  text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 md:w-60 md:h-12 lg:w-[425px] lg:h-14 md:text-base " />
+                <input name="lastname" type="text" placeholder="Last name"
+                    class="w-28 sm:w-[132px] h-10 text-sm mx-4 pl-2 text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 md:w-60 md:h-12 lg:w-[425px] lg:h-14 md:text-base " />
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+                <input name="subject" type="text" placeholder="Subject"
+                    class="w-64 sm:w-72 h-10  text-sm  text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 pl-2 mt-3 md:w-[515px] md:h-12 lg:w-[870px] lg:h-14 md:text-base" />
+                <input name="email" type="text" placeholder="Email"
+                    class="w-64 sm:w-72 h-10 text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 pl-2 text-sm mt-3 md:w-[515px] md:h-12 lg:w-[870px] lg:h-14 md:text-base" />
+                <textarea rows="8"
+                    class="w-64 sm:w-72 text-[gray] border border-solid border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 pl-2 text-sm mt-3 md:w-[515px] lg:w-[870px] md:text-base">Write your message here</textarea>
+            </div>
+
+            <div class="pl-4 md:pl-0 md:pr-[420px] lg:pr-[780px]">
+
+                <button
+                    class="w-[120px] h-10 text-white bg-gradient-to-r from-[#434343] to-[#1f1b1b] ml-12  mt-5 text-sm rounded-lg md:w-[150px] md:h-12 md:text-base hover:opacity-90">Send
+                    Message</button>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="bg-gradient-to-r from-[#434343] to-[#1f1b1b] w-full h-[50vh] sm:h[60vh] md:h-[60vh]  lg:h-[40vh]">
+        <ul class="text-white flex justify-center items-center ">
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">About</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Contact</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Privacy</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">FAQ</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Help</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Terms</li>
+        </ul>
+
+        <p class="text-white text-sm p-5 text-center md:text-lg ">This ecommerce website is created by Dikshant Dak for
+            educational and learning purposes.All copyrights are
+            belonged to Dikshant Dak. <br />
+            Brandastic : 2023</p>
+
+        <div class="flex justify-center items-center pb-8  md:mt-10">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-lg px-2 md:px-5"
+                    style="color: #1877f2;"></i></a>
+            <a href="https://www.instagram.com/dikshant_dak/"><i class="fa-brands fa-instagram fa-lg px-2 md:px-5"
+                    style="color: #E84C88;"></i></a>
+            <a href="https://www.facebook.com"><i class="fa-brands fa-twitter fa-lg px-2 md:px-5"
+                    style="color: #1DA1F2;"></i></a>
+            <a href="https://github.com/dikshant-dak"><i class="fa-brands fa-github fa-lg px-2 md:px-5"
+                    style="color: #0D2636;"></i></a>
+            <a href="https://www.linkedin.com/in/dikshant-dak/"><i class="fa-brands fa-linkedin fa-lg px-2 md:px-5"
+                    style="color: #0A66C2;"></i></a>
+        </div>
+    </footer>
+    <script src="script.js">
+        const menuIcon = document.querySelector('.menu-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

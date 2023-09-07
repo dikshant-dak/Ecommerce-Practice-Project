@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <title>Login</title>
+</head>
+<body>
+    <nav
+        class="justify-between pr-5 bg-gradient-to-r from-[#434343] to-[#1f1b1b] w-full h-[7vh] flex items-center md:justify-evenly shadow-lg relative z-10">
+        <div class="px-2 ">
+            <h2 class="text-white text-sm md:text-sm lg:text-lg uppercase md:cursor-pointer font-bold">Brandtastic</h2>
+        </div>
+
+        <div class="flex justify-between items-center ">
+            <div class="menu-icon md:hidden">
+                <div class="bar w-6 h-1 bg-white mb-1"></div>
+                <div class="bar w-6 h-1 bg-white mb-1"></div>
+                <div class="bar w-6 h-1 bg-white"></div>
+            </div>
+            <div class="close-icon cursor-pointer hidden text-white">
+                <i class="fa-solid fa-xmark" style="color: #fff;"></i>
+            </div>
+            <ul class="hidden md:flex justify-center items-center text-white text-sm md:text-base md:uppercase">
+                <li class="px-1 md:px-2 md:cursor-pointer hover:opacity-80 ">Home</li>
+                <li class="px-1 md:px-2 md:cursor-pointer hover:opacity-80 ">Categories</li>
+                <li class="px-1 hidden md:px-2 md:block md:cursor-pointer hover:opacity-80 ">About</li>
+                <li class="px-1 hidden md:px-2 md:block md:cursor-pointer hover:opacity-80 ">Contact Us</li>
+            </ul>
+        </div>
+
+        <ul class="mobile-menu w-full text-center text-xl pt-20 md:hidden ">
+            <li><a href="#" class="text-white leading-10">Home</a></li>
+            <li><a href="#" class="text-white leading-10">Categories</a></li>
+            <li><a href="#" class="text-white leading-10">About</a></li>
+            <li><a href="#" class="text-white leading-10">Contact</a></li>
+            <!-- <li><a href="#" class="hover:text-gray-300"></a></li> -->
+        </ul>
+
+        <div class="mx-3 hidden md:block">
+            <i class="fa-solid fa-magnifying-glass md:fa-lg px-1 md:px-3  md:cursor-pointer" style="color: #fff;"></i>
+            <i class="fa-solid fa-heart md:fa-lg px-1 md:px-3 md:cursor-pointer hidden md:block"
+                style="color: #fff;"></i>
+            <i class="fa-sharp fa-solid fa-bag-shopping md:fa-lg px-1 md:px-3 md:cursor-pointer hidden md:block"
+                style="color: #fff;"></i>
+        </div>
+
+        <div class="hidden md:block mr-2">
+            <img src="./images/dbs2.jpg " alt="Profile Image" class="rounded-full w-6 h-6 md:w-10 md:h-8" />
+        </div>
+    </nav>
+
+    <div class="flex h-[60vh] justify-center items-center bg-[#4f4f4f]">
+        <!-- <div class="hidden">
+            <h2>BRANDTASTIC</h2>
+            <h4>Welcome Back !</h4>
+            <p>Enter Your Details to Login to your Gurukul account</p>
+        </div> -->
+
+        <div class="flex flex-col justify-center items-center shadow-2xl rounded-[10px] tracking-normal p-10 bg-white">
+            <h2 class="text-center text-xl font-bold">Login</h2> 
+            <input name="email" type="text" placeholder="Email" class="w-64 h-10 text-[gray] border border-solid rounded-lg border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 mt-4 pl-2" />
+            <input name="password" type="text" placeholder="Password" class="w-64 h-10 text-[gray] border border-solid rounded-lg border-gray-400 focus:border-blue-500 focus:outline-none focus:ring-blue-500 mt-4 pl-2" />
+            <button class="w-[145px]  h-10 bg-gradient-to-r from-[#434343] to-[#1f1b1b] shadow-md mt-5 text-sm rounded-lg text-white hover:opacity-80 md:w-[165px] ">Login</button>
+            <button class="w-[145px] h-10 bg-gradient-to-r from-[#434343] to-[#1f1b1b] shadow-md mt-5 text-sm rounded-lg text-white hover:opacity-80 md:w-[165px] ">Forgot Password ?</button>
+        </div>
+    </div>
+
+    <!-- FOOTER SECTION -->
+
+    <footer class="bg-gradient-to-r from-[#434343] to-[#1f1b1b] w-full h-[50vh] sm:h[60vh] md:h-[60vh]  lg:h-[40vh]">
+        <ul class="text-white flex justify-center items-center ">
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">About</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Contact</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Privacy</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">FAQ</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Help</li>
+            <li class="text-xs px-1 sm:text-sm md:px-4 md:text-lg mt-[80px] md:cursor-pointer md:hover:text-gray-400">Terms</li>
+        </ul>
+
+        <p class="text-white text-sm p-5 text-center md:text-lg ">This ecommerce website is created by Dikshant Dak for
+            educational and learning purposes.All copyrights are
+            belonged to Dikshant Dak. <br />
+            Brandastic : 2023</p>
+
+        <div class="flex justify-center items-center pb-8  md:mt-10">
+            <a href="https://www.facebook.com"><i class="fa-brands fa-facebook fa-lg px-2 md:px-5"
+                    style="color: #1877f2;"></i></a>
+            <a href="https://www.instagram.com/dikshant_dak/"><i class="fa-brands fa-instagram fa-lg px-2 md:px-5"
+                    style="color: #E84C88;"></i></a>
+            <a href="https://www.facebook.com"><i class="fa-brands fa-twitter fa-lg px-2 md:px-5"
+                    style="color: #1DA1F2;"></i></a>
+            <a href="https://github.com/dikshant-dak"><i class="fa-brands fa-github fa-lg px-2 md:px-5"
+                    style="color: #0D2636;"></i></a>
+            <a href="https://www.linkedin.com/in/dikshant-dak/"><i class="fa-brands fa-linkedin fa-lg px-2 md:px-5"
+                    style="color: #0A66C2;"></i></a>
+        </div>
+    </footer>
+    
+    <script src="script.js">
+        const menuIcon = document.querySelector('.menu-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        menuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
